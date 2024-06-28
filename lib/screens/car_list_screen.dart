@@ -10,14 +10,16 @@ class CarListScreen extends StatelessWidget {
       name: 'Toyota Avanza',
       description: 'Mobil keluarga yang nyaman.',
       pricePerDay: 40.0,
-      imageUrl: 'https://link-to-image.com/avanza.jpg',
+      imageUrl:
+          'https://www.toyota.astra.co.id//sites/default/files/2023-09/2-avanza-gray-metallic.png',
     ),
     Car(
       id: '2',
       name: 'Honda Civic',
       description: 'Mobil sedan dengan performa tinggi.',
       pricePerDay: 60.0,
-      imageUrl: 'https://link-to-image.com/civic.jpg',
+      imageUrl:
+          'https://imgcdn.oto.com/large/gallery/color/14/524/honda-civic-type-r-color-978755.jpg',
     ),
   ];
 
