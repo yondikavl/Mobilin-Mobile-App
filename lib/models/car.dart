@@ -3,13 +3,17 @@ class Car {
   final String name;
   final String description;
   final double pricePerDay;
-  final String imageUrl;
+  final String imagePath;
+  final int seats;
+  final String speed;
 
   Car({
     required this.id,
     required this.name,
     required this.description,
     required this.pricePerDay,
-    required this.imageUrl,
+    required this.imagePath,
+    required this.seats,
+    required this.speed,
   });
 }

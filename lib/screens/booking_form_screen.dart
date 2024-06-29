@@ -4,7 +4,7 @@ import '../models/car.dart';
 class BookingFormScreen extends StatefulWidget {
   final Car car;
 
-  const BookingFormScreen({Key? key, required this.car}) : super(key: key);
+  const BookingFormScreen({super.key, required this.car});
 
   @override
   _BookingFormScreenState createState() => _BookingFormScreenState();
@@ -20,17 +20,18 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Formulir Pemesanan'),
+        title: const Text('Formulir Pemesanan'),
+        centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(24.0),
         child: Form(
           key: _formKey,
           child: Column(
             children: [
               TextFormField(
                 controller: _nameController,
-                decoration: InputDecoration(labelText: 'Nama Lengkap'),
+                decoration: const InputDecoration(labelText: 'Nama Lengkap'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Nama tidak boleh kosong';
@@ -40,7 +41,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
               ),
               TextFormField(
                 controller: _phoneController,
-                decoration: InputDecoration(labelText: 'Nomor Telepon'),
+                decoration: const InputDecoration(labelText: 'Nomor Telepon'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Nomor telepon tidak boleh kosong';
@@ -50,7 +51,8 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
               ),
               TextFormField(
                 controller: _daysController,
-                decoration: InputDecoration(labelText: 'Lama Penyewaan (hari)'),
+                decoration:
+                    const InputDecoration(labelText: 'Lama Penyewaan (jam)'),
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -59,16 +61,29 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
                   return null;
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Pemesanan berhasil')),
+                      const SnackBar(
+                          content: Text(
+                              'Pemesanan berhasil, kami akan segera menghubungi anda')),
                     );
                   }
                 },
-                child: Text('Kirim'),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.teal,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  textStyle: const TextStyle(fontSize: 20),
+                  minimumSize: const Size(double.infinity, 50),
+                ),
+                child: const Text('Kirim'),
               ),
             ],
           ),

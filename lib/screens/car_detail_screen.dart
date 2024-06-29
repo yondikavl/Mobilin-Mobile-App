@@ -6,44 +6,47 @@ class CarDetailScreen extends StatelessWidget {
   final Car car;
 
   const CarDetailScreen({
-    Key? key,
+    super.key,
     required this.car,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(car.name),
+        centerTitle: true,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Image.network(car.imageUrl, height: 250, fit: BoxFit.cover),
+          Image.asset('images/${car.imagePath}',
+              height: 150, fit: BoxFit.contain),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding:
+                const EdgeInsets.only(left: 24, right: 24, top: 24, bottom: 12),
             child: Text(
               car.name,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             child: Text(
               car.description,
-              style: TextStyle(fontSize: 16),
+              style: const TextStyle(fontSize: 16),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             child: Text(
-              '\$${car.pricePerDay} per day',
-              style: TextStyle(fontSize: 20, color: Colors.green),
+              '\Rp.${car.pricePerDay} / Jam',
+              style: TextStyle(fontSize: 20, color: Colors.teal.shade500),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(24),
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -53,7 +56,17 @@ class CarDetailScreen extends StatelessWidget {
                   ),
                 );
               },
-              child: Text('Sewa Sekarang'),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.teal,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                textStyle: const TextStyle(fontSize: 20),
+              ),
+              child: const Text('Sewa Sekarang'),
             ),
           ),
         ],
