@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pemula/models/car.dart';
+import 'package:Mobilin/models/car.dart';
 import '../widgets/car_card.dart';
 import 'car_detail_screen.dart';
 
@@ -8,7 +8,8 @@ class HomeScreen extends StatelessWidget {
     Car(
       id: '1',
       name: 'Toyota Avanza',
-      description: 'Mobil keluarga yang nyaman.',
+      description:
+          'Toyota Avanza adalah mobil keluarga yang nyaman dengan desain yang ergonomis. Dilengkapi dengan fitur-fitur canggih seperti sistem audio premium, koneksi Bluetooth, dan AC terpusat. Cocok untuk perjalanan jauh bersama keluarga Anda.',
       pricePerDay: 1200000.0,
       imagePath: 'avanza.png',
       seats: 7,
@@ -17,7 +18,8 @@ class HomeScreen extends StatelessWidget {
     Car(
       id: '2',
       name: 'Honda Civic',
-      description: 'Mobil sedan dengan performa tinggi.',
+      description:
+          'Honda Civic merupakan mobil sedan dengan performa tinggi yang menawarkan pengalaman berkendara yang dinamis. Didesain dengan teknologi terkini, dilengkapi dengan mesin yang bertenaga, interior mewah, dan sistem keamanan tingkat tinggi.',
       pricePerDay: 1300000.0,
       imagePath: 'civic.png',
       seats: 5,
@@ -26,7 +28,8 @@ class HomeScreen extends StatelessWidget {
     Car(
       id: '3',
       name: 'Suzuki Ertiga',
-      description: 'MPV dengan ruang kabin yang luas.',
+      description:
+          'Suzuki Ertiga adalah MPV dengan desain modern yang menawarkan ruang kabin yang luas dan nyaman. Dilengkapi dengan kursi fleksibel, teknologi mutakhir, dan sistem keamanan terbaik untuk kenyamanan dan keselamatan Anda selama perjalanan.',
       pricePerDay: 1100000.0,
       imagePath: 'ertiga.png',
       seats: 7,
@@ -35,7 +38,8 @@ class HomeScreen extends StatelessWidget {
     Car(
       id: '4',
       name: 'Mitsubishi Pajero',
-      description: 'SUV dengan performa yang tangguh.',
+      description:
+          'Mitsubishi Pajero adalah SUV dengan performa tangguh yang siap menghadapi berbagai medan. Didesain untuk petualangan, dilengkapi dengan mesin bertenaga, sistem penggerak empat roda, dan kenyamanan interior premium untuk perjalanan yang tak terlupakan.',
       pricePerDay: 1500000.0,
       imagePath: 'pajero.png',
       seats: 7,
@@ -44,7 +48,8 @@ class HomeScreen extends StatelessWidget {
     Car(
       id: '5',
       name: 'Toyota Alphard',
-      description: 'MPV mewah dengan kenyamanan terbaik.',
+      description:
+          'Toyota Alphard adalah MPV mewah dengan kenyamanan terbaik dan desain elegan. Dilengkapi dengan kursi berlapis kulit, sistem hiburan terintegrasi, dan fitur keamanan canggih. Cocok untuk perjalanan bisnis atau liburan bersama keluarga dalam gaya yang mewah.',
       pricePerDay: 1800000.0,
       imagePath: 'alphard.png',
       seats: 7,

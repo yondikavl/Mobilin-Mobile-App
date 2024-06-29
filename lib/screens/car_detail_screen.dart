@@ -32,9 +32,17 @@ class CarDetailScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            child: Text(
-              car.description,
-              style: const TextStyle(fontSize: 16),
+            child: RichText(
+              textAlign: TextAlign.justify,
+              text: TextSpan(
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black, // Sesuaikan dengan warna teks Anda
+                ),
+                children: <TextSpan>[
+                  TextSpan(text: car.description),
+                ],
+              ),
             ),
           ),
           Padding(

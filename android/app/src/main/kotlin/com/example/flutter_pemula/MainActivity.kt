@@ -1,4 +1,4 @@
-package com.example.flutter_pemula
+package com.example.mobilin
 
 import io.flutter.embedding.android.FlutterActivity
 
